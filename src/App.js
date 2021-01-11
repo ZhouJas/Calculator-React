@@ -34,6 +34,7 @@ class App extends Component {
     if (this.state.previous.length>0) {
       this.setState({current:eval(this.state.previous[this.state.previous.length-1].concat(this.state.current))});
       this.state.previous.push(this.state.previous[this.state.previous.length-1].concat(this.state.current));
+      this.setState({nextIsReset:true});
     }
   }
 
